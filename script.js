@@ -26,9 +26,7 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-console.log(passwordText)
-console.log(passwordText.value)
-// code above is what was given by instructors figure out how to use it 
+
 }
 
 function generatePassword () {
@@ -41,6 +39,7 @@ function generatePassword () {
     window.alert('This need a value') 
 
   // if password is below 8 OR higher than 128, then a prompt will display the following message to re-enter value
+  // add a while loop to check if the user input on the window prompt is true 
   } else if (urPassword < 8 || urPassword > 128) {
 
       window.alert("You must choose between 8 and 128");
@@ -62,10 +61,10 @@ function generatePassword () {
   } else if (userNumbers && userSymbols && userUcLetters && userLcLetters) {
 
     options = numbers.concat(symbols, letters, smlLetters) 
-}  ;
+}  
 
 // creating an if statement when the user selects only 3 choices
-else if (userSymbols && userNumbers && userUcLetters) {
+ else if (userSymbols && userNumbers && userUcLetters) {
     options = symbols.concat(numbers, letters);
 }
 else if (userSymbols && userNumbers && userLcLetters) {
@@ -106,7 +105,7 @@ else if (userNumbers) {
 else if (userLcLetters) {
     options = smlLetters;
 }
-// Created space variable to fill uppercase conversion
+
 else if (userUcLetters) {
     options = letters;
 };
