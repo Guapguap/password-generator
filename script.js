@@ -28,9 +28,11 @@ function writePassword() {
 }
 
 function generatePassword () {
+
   // To be used to push new array values into 
   let passwordArray = [];
-// created a variable named 'urPassword' to prompt the following message to store a value from the user 
+  
+// created a variable named 'urPasswordLength' to prompt the following message to store a value from the user 
   let urPasswordLength = window.prompt('How many characters would you like your password? Choose between 8 and 128');
   
 // if the user left the prompt empty before confirming, it will send an alert with the following message 
@@ -38,10 +40,14 @@ function generatePassword () {
     window.alert('This need a value') 
 
   // if password is below 8 OR higher than 128, then a prompt will display the following message to re-enter value
-  // add a while loop to check if the user input on the window prompt is true 
+  // added a while loop to check if the user input on the window prompt is true 
   } else if (urPasswordLength < 8 || urPasswordLength > 128) {
+
       urPasswordLength = window.prompt('How many characters would you like your password? Choose between 8 and 128');
+
       window.alert("You must choose between 8 and 128");
+
+      // this do while loop will keep the prompt displaying if the user does not enter a valid input 
       do {
       
         urPasswordLength = window.prompt('How many characters would you like your password? Choose between 8 and 128');
@@ -52,13 +58,13 @@ function generatePassword () {
   
     // these variables have been assigned within the function that will display the following confirm message to store as value 
   if (urPasswordLength) {
-       confirmNumbers = window.confirm("Will this contain numbers?");
-       confirmSymbols = window.confirm("Will this contain special characters?");
-       confirmUcLetters = window.confirm("Will this contain Uppercase letters?");
-       confirmLcLetters = window.confirm("Will this contain Lowercase letters?");
+      confirmNumbers = window.confirm("Will this contain numbers?");
+      confirmSymbols = window.confirm("Will this contain special characters?");
+      confirmUcLetters = window.confirm("Will this contain Uppercase letters?");
+      confirmLcLetters = window.confirm("Will this contain Lowercase letters?");
   };
 
-  
+  // If nothing is chosen, then alert will display the following message below 
   if (!confirmNumbers && !confirmSymbols && !confirmUcLetters && !confirmLcLetters) {
     options = alert("You must choose a criteria!");
 // creating an if statement when the user selects all the choices to generate password 
@@ -117,9 +123,7 @@ else if (confirmUcLetters) {
 
   // the for loops creates adds a counter up to the user input for character count 
   // the options variable will turn the entire length of the concatenated value into a random array 
-  // the optionsArray variable will then push everything into the empty array above named: 'subPassword' 
-
-
+  // the optionsArray variable will then push everything into the empty array above named: 'passwordArray' 
 
   for (let i = 0; i < urPasswordLength; i++){
     let optionsArray = options[Math.floor(Math.random() * options.length)];
@@ -133,7 +137,5 @@ else if (confirmUcLetters) {
   return finalPassword;
 }
 
-// this code was given by instructor, figure out what it is for 
 // Add event listener to generate button
-
 generateBtn.addEventListener("click", writePassword) 
