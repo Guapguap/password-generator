@@ -1,5 +1,4 @@
 # password-generator
-Password Generator Assignment Week 3
 
 ## Description
 
@@ -11,14 +10,14 @@ Here is a short description about my thoughts looking into this project.
 <br>
 <strong>Why did you build this project?</strong>
 <br>
-    -I built this portfolio for future employers and a personal tab for myself to refer back to and add anymore future projects. It is a great 'folder' to hold and view everything I've done in the past.  
+    -This project was my first attempt at utilizing my knowledge of JavaScript and see how it worked cohesively with the WEB API methods. A great introduction to the subject.
 <strong>What problems did I encounter?</strong>
 <br>
-    -I encountered several problems with this assignment. I noticed that my understanding of flexbox was not the greatest. Having to figure out how each property works cohesively with the container and children of the container was a challenge of its own. This project forced my hand to crack down and overcome these problems.
+    -There were two problems at the end that I encountered. The first being the program still ran even though the user did not put a valid input. The second was that the previous password text was still displayed on the screen and would not refresh when starting a new generated password and would combine the two. With the help of my tutor, I was able to figure out that my variable to store the password was global and not local. So every time the function was ran, the memory was still stored and not reset. The while loop was the solution to the program still running after an invalid input. The prompt kept displaying even after an invalid input with an alert to notify the user to choose a valid number. 
 <br>
 <strong>What did you learn?</strong>
 <br>
-    -I got an overall better understanding of flexbox and how it works. I am at much more comfortable level when using flexbox. I learned through my tutor that it all comes down to trial and error. Keep playing around with the properties and eventually you will learn how it works. There is no point going into a tutorial 'hell' of trying to read and find the answer.
+    -I learned a lot more about if else statements, how loops are very important to get an answer you want without having to write an unnecessary amount of code, and the importance of global and local scopes.
 
 ## Website Link and Screenshot Usage
 
@@ -26,7 +25,7 @@ Below is the link to my website and a screenshot of my website to preview it bef
 
 <ol>
     <li>If you would like to open up the website, click on the hyperlink provided below.</li>
-    <li>Once you are brought to the website page, you can navigate the site by using the navigation bar on the very top right of the page.</li>
+    <li>Once you are brought to the website page, you can click the button and proceed by selecting the following commands displayed.</li>
     <li>If you do not want to open the website, you can preview how it has been designed in the screenshot below.</li>
 </ol>
 
